@@ -12,8 +12,12 @@ $('document').ready(function() {
     
     let isExpanded = false;
 
-    $('#navbarContent').on('show.bs.collapse', function() {
+    $('#navbarContent').on('shown.bs.collapse', function() {
         isExpanded = true;
+    })
+
+    $('#navbarContent').on('hidden.bs.collapse', function() {
+        isExpanded = false;
     })
 
     $('.nav-link, .navbar-brand').on('click', function() {
@@ -21,12 +25,11 @@ $('document').ready(function() {
         $(this).addClass('active');
         changeSection();
         if (isExpanded) {
-            let navbar = document.getElementById('navbarContent')
+            let navbar = $('#navbarContent')
             let bsCollapse = new bootstrap.Collapse(navbar, {
                 toggle : true
             })
         }
-        isExpanded = false;
     });
 
     changeSection();
