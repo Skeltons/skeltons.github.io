@@ -26,7 +26,12 @@
 }
 
 .background-palette {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
     background-color: #2E3440;
+    background-image: url("../image/bg.png");
 }
 
 .card-palette:hover {
@@ -51,3 +56,4 @@
     height: 200px;
     width: 200px;
 }
+
