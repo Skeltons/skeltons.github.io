@@ -57,3 +57,11 @@
     width: 200px;
 }
 
+.education-size {
+    object-fit: scale-down;
+    object-position: center;
+    max-height: 200px;
+    width: 100%;
+    background-color: white;
+}
+
